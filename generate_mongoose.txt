@@ -1,0 +1,9 @@
+mongoose-gen -m news -f type:string,title:string,published_at:date,id:number,feature_image_url:string,deeplink_uri:string,team_id:number,league_id:number -r
+
+mongoose-gen -m team -f team_id:number,full_name:string,conference:string,city:string,league_id:array -r
+
+mongoose-gen -m league -f league_id:number,name:string -r
+
+mongoose-gen -m schedule -f current_season:array -r
+
+mongoose-gen -m events -f status:string,resource_uri:string,red_zone:string,odds:objectId,league:string,id:number,event_venue:string,deeplink_uri:string,date:date,box_score:string -r
